@@ -118,7 +118,7 @@ class ProdutoControllerTest {
         String view = controller.buscarPorId(1L, model);
 
         // Assert
-        assertEquals("Produtos", view);
+        assertEquals("produtos", view);
         verify(model, times(1)).addAttribute("produtos", List.of(produto));
     }
 
@@ -132,7 +132,7 @@ class ProdutoControllerTest {
         String view = controller.buscarPorId(null, model);
 
         // Assert
-        assertEquals("Produtos", view);
+        assertEquals("produtos", view);
         verify(produtoService, times(1)).listarTodos();
     }
 }
